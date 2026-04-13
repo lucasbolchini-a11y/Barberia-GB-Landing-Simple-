@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es" id="html-root">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Golden Blade Barbershop — Miami Beach</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="logo-favicon.svg">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <div class="nav-logo">Golden Blade</div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#servicios" onclick="closeMenu()" data-es="Servicios" data-en="Services">Servicios</a></li>
+      <li><a href="#nosotros"  onclick="closeMenu()" data-es="Nosotros"  data-en="About"   >Nosotros</a></li>
+      <li><a href="#trabajos"  onclick="closeMenu()" data-es="Trabajos"  data-en="Gallery" >Trabajos</a></li>
+      <li><a href="#contacto"  onclick="closeMenu()" data-es="Contacto"  data-en="Contact" >Contacto</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <button class="lang-btn" id="langBtn" onclick="toggleLang()">EN</button>
+
+      <!--
+        wa-link = link de WhatsApp dinámico.
+        data-msg-es = mensaje en español.
+        data-msg-en = mensaje en inglés.
+        El JS lee el idioma actual y arma el href automáticamente.
+      -->
+      <a href="#"
+         class="nav-cta wa-link"
+         data-msg-es="Hola! Quiero sacar un turno."
+         data-msg-en="Hi! I'd like to book an appointment."
+         data-es="Reservar" data-en="Book now">Reservar</a>
+    </div>
+
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero-content">
+      <p class="hero-eyebrow"
+         data-es="Miami Beach, FL"
+         data-en="Miami Beach, FL">Miami Beach, FL</p>
+
+      <h1 data-es="Buen corte.<br><em>Sin perder tiempo.</em>"
+          data-en="A good cut.<br><em>No wasted time.</em>">Buen corte.<br><em>Sin perder tiempo.</em></h1>
+
+      <p class="hero-sub"
+         data-es="Barbería latina en Miami Beach. Fade, clásico o barba — reservás por WhatsApp y llegás directo a la silla."
+         data-en="Latin barbershop in Miami Beach. Fade, classic cut or beard — book on WhatsApp and go straight to the chair."
+      >Barbería latina en Miami Beach. Fade, clásico o barba — reservás por WhatsApp y llegás directo a la silla.</p>
+
+      <div class="hero-btns">
+        <!-- Hero CTA principal -->
+        <a href="#"
+           class="btn-primary wa-link"
+           data-msg-es="Hola! Quiero sacar un turno para hoy. ¿Tienen lugar?"
+           data-msg-en="Hi! I'd like to book an appointment for today. Do you have availability?"
+           data-es="Sacar turno hoy"
+           data-en="Book for today">Sacar turno hoy</a>
+
+        <a href="#servicios" class="btn-outline"
+           data-es="Ver precios"
+           data-en="See prices">Ver precios</a>
+      </div>
+
+      <div class="hero-trust">
+        <span class="hero-trust-dot"></span>
+        <p data-es="Sin filas. Sin espera. Respondemos en menos de 10 minutos."
+           data-en="No lines. No wait. We reply in under 10 minutes."
+        >Sin filas. Sin espera. Respondemos en menos de 10 minutos.</p>
+      </div>
+    </div>
+
+    <div class="hero-pills">
+      <span class="pill" data-es="Turno hoy"   data-en="Same-day booking">Turno hoy</span>
+      <span class="pill" data-es="Sin espera"  data-en="No waiting"      >Sin espera</span>
+      <span class="pill" data-es="Fade limpio" data-en="Clean fade"      >Fade limpio</span>
+    </div>
+  </section>
+
+
+  <!-- POR QUÉ ELEGIRNOS -->
+  <section class="why-us">
+    <div class="why-us-inner">
+      <div class="why-item">
+        <span class="why-num">01</span>
+        <div>
+          <h4 data-es="Llegás a tu hora"    data-en="Show up on time"   >Llegás a tu hora</h4>
+          <p  data-es="Reservás por WhatsApp, te confirmamos el turno y no esperás. Sin filas, sin improvisación."
+              data-en="You book on WhatsApp, we confirm, and you don't wait. No lines, no surprises."
+          >Reservás por WhatsApp, te confirmamos el turno y no esperás. Sin filas, sin improvisación.</p>
+        </div>
+      </div>
+      <div class="why-divider"></div>
+      <div class="why-item">
+        <span class="why-num">02</span>
+        <div>
+          <h4 data-es="Precio fijo siempre"  data-en="Always a flat rate" >Precio fijo siempre</h4>
+          <p  data-es="Lo que ves en el menú es lo que pagás. Sin cobros de último minuto ni sorpresas al final."
+              data-en="What you see on the menu is what you pay. No last-minute charges or end-of-visit surprises."
+          >Lo que ves en el menú es lo que pagás. Sin cobros de último minuto ni sorpresas al final.</p>
+        </div>
+      </div>
+      <div class="why-divider"></div>
+      <div class="why-item">
+        <span class="why-num">03</span>
+        <div>
+          <h4 data-es="Especialistas en fade y barba" data-en="Fade and beard specialists">Especialistas en fade y barba</h4>
+          <p  data-es="Cinco barberos dedicados a cortes modernos y barba. Diez años trabajando con la comunidad latina de Miami."
+              data-en="Five barbers focused on modern cuts and beards. Ten years serving Miami's Latin community."
+          >Cinco barberos dedicados a cortes modernos y barba. Diez años trabajando con la comunidad latina de Miami.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- SERVICIOS -->
+  <section class="services" id="servicios">
+    <div class="section-header">
+      <span class="section-eyebrow" data-es="Precios fijos, sin vueltas" data-en="Flat prices, no fuss">Precios fijos, sin vueltas</span>
+      <h2 data-es="¿Qué necesitás?" data-en="What do you need?">¿Qué necesitás?</h2>
+    </div>
+    <div class="services-grid">
+
+      <!-- CORTE CLÁSICO -->
+      <div class="service-card">
+        <span class="service-icon">✂️</span>
+        <h3 data-es="Corte clásico" data-en="Classic cut">Corte clásico</h3>
+        <p  data-es="Tijera o máquina. Lavado, secado y terminaciones incluidas."
+            data-en="Scissors or clippers. Wash, dry, and clean finish included."
+        >Tijera o máquina. Lavado, secado y terminaciones incluidas.</p>
+        <div class="service-price">$25 <span data-es="/ turno" data-en="/ visit">/ turno</span></div>
+        <a href="#"
+           class="service-btn wa-link"
+           data-msg-es="Hola! Quiero reservar un turno para un corte clásico ($25). ¿Cuándo tienen disponibilidad?"
+           data-msg-en="Hi! I'd like to book an appointment for a classic cut ($25). When do you have availability?"
+           data-es="Reservar este servicio"
+           data-en="Book this service">Reservar este servicio</a>
+      </div>
+
+      <!-- FADE MODERNO -->
+      <div class="service-card">
+        <span class="service-icon">💈</span>
+        <h3 data-es="Fade moderno" data-en="Modern fade">Fade moderno</h3>
+        <p  data-es="Skin, low o high fade. A medida según tu cabello y estilo."
+            data-en="Skin, low, or high fade. Tailored to your hair type and style."
+        >Skin, low o high fade. A medida según tu cabello y estilo.</p>
+        <div class="service-price">$35 <span data-es="/ turno" data-en="/ visit">/ turno</span></div>
+        <a href="#"
+           class="service-btn wa-link"
+           data-msg-es="Hola! Quiero reservar un turno para un fade moderno ($35). ¿Cuándo tienen disponibilidad?"
+           data-msg-en="Hi! I'd like to book an appointment for a modern fade ($35). When do you have availability?"
+           data-es="Reservar este servicio"
+           data-en="Book this service">Reservar este servicio</a>
+      </div>
+
+      <!-- BARBA -->
+      <div class="service-card">
+        <span class="service-icon">🪒</span>
+        <h3 data-es="Arreglo de barba" data-en="Beard trim">Arreglo de barba</h3>
+        <p  data-es="Perfilado, navaja y toalla caliente. Salís notando la diferencia."
+            data-en="Shape-up, straight razor, and hot towel. You'll notice the difference."
+        >Perfilado, navaja y toalla caliente. Salís notando la diferencia.</p>
+        <div class="service-price">$20 <span data-es="/ turno" data-en="/ visit">/ turno</span></div>
+        <a href="#"
+           class="service-btn wa-link"
+           data-msg-es="Hola! Quiero reservar un turno para arreglo de barba ($20). ¿Cuándo tienen disponibilidad?"
+           data-msg-en="Hi! I'd like to book an appointment for a beard trim ($20). When do you have availability?"
+           data-es="Reservar este servicio"
+           data-en="Book this service">Reservar este servicio</a>
+      </div>
+
+      <!-- COMBO -->
+      <div class="service-card service-card--featured">
+        <span class="service-badge" data-es="El más pedido" data-en="Most popular">El más pedido</span>
+        <span class="service-icon">👑</span>
+        <h3 data-es="Corte + barba" data-en="Cut + beard">Corte + barba</h3>
+        <p  data-es="Corte, barba y tratamiento capilar. Entrás en 60 minutos y salís listo."
+            data-en="Cut, beard, and hair treatment. In and out in 60 minutes."
+        >Corte, barba y tratamiento capilar. Entrás en 60 minutos y salís listo.</p>
+        <div class="service-price">$55 <span data-es="/ combo" data-en="/ combo">/ combo</span></div>
+        <a href="#"
+           class="service-btn wa-link"
+           data-msg-es="Hola! Quiero reservar el combo corte + barba ($55). ¿Cuándo tienen disponibilidad?"
+           data-msg-en="Hi! I'd like to book the cut + beard combo ($55). When do you have availability?"
+           data-es="Reservar el combo"
+           data-en="Book the combo">Reservar el combo</a>
+      </div>
+
+    </div>
+
+    <div class="services-cta">
+      <a href="#"
+         class="btn-outline wa-link"
+         data-msg-es="Hola! Quiero consultar disponibilidad de turnos para hoy. ¿Qué horarios tienen?"
+         data-msg-en="Hi! I'd like to check today's availability. What time slots do you have?"
+         data-es="Consultar disponibilidad"
+         data-en="Check availability">Consultar disponibilidad</a>
+    </div>
+  </section>
+
+
+  <!-- SOBRE NOSOTROS -->
+  <section id="nosotros">
+    <div class="about">
+      <div class="about-text">
+        <div class="section-header" style="text-align:left; margin-bottom:0;">
+          <span class="section-eyebrow" data-es="Quiénes somos" data-en="Who we are">Quiénes somos</span>
+          <h2 data-es="Empezamos con una silla. Hoy somos cinco."
+              data-en="We started with one chair. Now we're five."
+          >Empezamos con una silla. Hoy somos cinco.</h2>
+        </div>
+        <p data-es="En 2014 abrimos en Miami Beach con ganas de hacer bien algo simple: un buen corte, a tiempo y al precio justo. Hoy somos cinco barberos especializados en fade y barba, atendiendo a la comunidad latina y a cualquiera que quiera salir bien."
+           data-en="In 2014 we opened in Miami Beach with one goal: a good cut, on time, at a fair price. Today we're five barbers specializing in fades and beards, serving Miami's Latin community and anyone who wants to look right."
+        >En 2014 abrimos en Miami Beach con ganas de hacer bien algo simple: un buen corte, a tiempo y al precio justo. Hoy somos cinco barberos especializados en fade y barba, atendiendo a la comunidad latina y a cualquiera que quiera salir bien.</p>
+        <p data-es="Reservás por WhatsApp, te confirmamos en minutos y llegás directo a la silla. Sin filas."
+           data-en="You book on WhatsApp, we confirm in minutes, and you go straight to the chair. No lines."
+        >Reservás por WhatsApp, te confirmamos en minutos y llegás directo a la silla. Sin filas.</p>
+        <a href="#"
+           class="about-cta wa-link"
+           data-msg-es="Hola! Quiero hacerles una consulta sobre Golden Blade."
+           data-msg-en="Hi! I have a question about Golden Blade.">Hacernos una pregunta →</a>
+      </div>
+      <div class="about-img">
+        <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=600&q=80"
+             alt="Golden Blade Barbershop Miami"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="about-img-placeholder" style="display:none;">
+          <span>✂️</span><p>Golden Blade</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- GALERÍA -->
+  <section class="gallery-section" id="trabajos">
+    <div class="section-header">
+      <span class="section-eyebrow" data-es="Resultados reales"           data-en="Real results"       >Resultados reales</span>
+      <h2                            data-es="Lo que hacemos todos los días" data-en="What we do every day">Lo que hacemos todos los días</h2>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=600&q=80" alt="Haircut Miami">
+        <div class="gallery-overlay"></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600&q=80" alt="Golden Blade interior">
+        <div class="gallery-overlay"></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1622287162716-f311baa1a2b8?w=600&q=80" alt="Fade cut Miami">
+        <div class="gallery-overlay"></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=600&q=80" alt="Beard trim Miami">
+        <div class="gallery-overlay"></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=600&q=80"
+     alt="Barbero trabajando en Miami Beach"
+     loading="lazy"
+     onerror="this.style.display='none'">
+        <div class="gallery-overlay"></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CTA FINAL -->
+  <section class="cta-section" id="contacto">
+    <p class="cta-eyebrow" data-es="¿Listo para reservar?" data-en="Ready to book?">¿Listo para reservar?</p>
+    <h2 data-es="Escribinos ahora.<br>En 10 minutos tenés turno."
+        data-en="Message us now.<br>You'll have a spot in 10 minutes."
+    >Escribinos ahora.<br>En 10 minutos tenés turno.</h2>
+
+    <a href="#"
+       class="whatsapp-btn wa-link"
+       data-msg-es="Hola! Quiero sacar un turno en Golden Blade. ¿Qué disponibilidad tienen?"
+       data-msg-en="Hi! I'd like to book an appointment at Golden Blade. What's your availability?"
+       data-es="Abrir WhatsApp y reservar"
+       data-en="Open WhatsApp and book">Abrir WhatsApp y reservar</a>
+
+    <p class="cta-sub"
+       data-es="También podés escribirnos para consultar precios o disponibilidad."
+       data-en="You can also message us to check prices or availability."
+    >También podés escribirnos para consultar precios o disponibilidad.</p>
+
+    <div class="cta-info">
+      <div class="cta-info-item">
+        <span class="cta-info-icon">📍</span>
+        <span data-es="Miami Beach, FL — Collins Ave 4200"
+              data-en="Miami Beach, FL — 4200 Collins Ave"
+        >Miami Beach, FL — Collins Ave 4200</span>
+      </div>
+      <div class="cta-info-item">
+        <span class="cta-info-icon">🕐</span>
+        <span data-es="Lun–Sáb · 9 AM – 8 PM" data-en="Mon–Sat · 9 AM – 8 PM">Lun–Sáb · 9 AM – 8 PM</span>
+      </div>
+      <div class="cta-info-item">
+        <span class="cta-info-icon">📱</span>
+        <span>+1 (786) 261-8924</span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="logo">Golden Blade</div>
+    <p data-es="© 2024 · Miami Beach, FL" data-en="© 2024 · Miami Beach, FL">© 2024 · Miami Beach, FL</p>
+    <div class="socials">
+      <a href="https://www.instagram.com/lucas_bolchini/" target="_blank">Instagram</a>
+      <a href="https://www.facebook.com/profile.php?id=100089966088421" target="_blank">Facebook</a>
+      <!-- WhatsApp en footer — mensaje genérico -->
+      <a href="#"
+         class="wa-link"
+         data-msg-es="Hola! Quiero contactarme con Golden Blade."
+         data-msg-en="Hi! I'd like to get in touch with Golden Blade."
+      >WhatsApp</a>
+    </div>
+  </footer>
+
+  <!-- BOTÓN FLOTANTE -->
+  <a href="#"
+     class="wa-float wa-link"
+     data-msg-es="Hola! Quiero sacar un turno en Golden Blade."
+     data-msg-en="Hi! I'd like to book an appointment at Golden Blade."
+     title="WhatsApp">💬</a>
+
+  <script src="script.js"></script>
+</body>
+</html>

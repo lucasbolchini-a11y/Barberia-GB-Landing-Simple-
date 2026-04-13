@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <rect width="200" height="200" fill="#0A0A0A"/>
+
+  <!-- Monograma GB -->
+  <text
+    x="100" y="130"
+    text-anchor="middle"
+    font-family="'Playfair Display', Georgia, serif"
+    font-size="96"
+    font-weight="900"
+    letter-spacing="4"
+    fill="#C9972B"
+  >GB</text>
+
+  <!-- Texto debajo -->
+  <text
+    x="100" y="162"
+    text-anchor="middle"
+    font-family="'Josefin Sans', Arial, sans-serif"
+    font-size="11"
+    font-weight="300"
+    letter-spacing="6"
+    fill="rgba(201,151,43,0.55)"
+  >GOLDEN BLADE</text>
+</svg>
