@@ -175,6 +175,7 @@ nav {
   position: relative;
   z-index: 1;
   max-width: 680px;
+   z-index: 2;
 }
 
 .hero-eyebrow {
@@ -993,6 +994,7 @@ body.gsap-ready .hero-pills {
   gap: 14px;
   z-index: 2;
   opacity: 0;
+   z-index: 0;
 }
 
 .hero-scroll-line {
