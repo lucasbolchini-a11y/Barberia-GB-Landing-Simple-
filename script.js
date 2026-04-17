@@ -42,6 +42,21 @@ function updateWaLinks(lang) {
   });
 }
 
+function ensureFloatingWaButton() {
+  const floatBtn = document.querySelector('.wa-float');
+  if (!floatBtn) return;
+
+  floatBtn.innerHTML = `
+    <span class="wa-float-icon">💬</span>
+    <span class="wa-float-text">
+      ${currentLang === 'en' ? 'Book on WhatsApp' : 'Reservar por WhatsApp'}
+    </span>
+  `;
+
+  floatBtn.setAttribute('aria-label', 'WhatsApp');
+  floatBtn.setAttribute('title', 'WhatsApp');
+}
+
 
 // ── SELECTOR DE IDIOMA ─────────────────────────────────────────────────
 /*
@@ -81,6 +96,7 @@ function toggleLang() {
 }
 
 // Aplicar al cargar
+ensureFloatingWaButton();
 applyLang(currentLang);
 
 

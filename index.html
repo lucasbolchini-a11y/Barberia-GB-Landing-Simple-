@@ -7,6 +7,9 @@
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="logo-favicon.svg">
+  <!-- GSAP + ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 </head>
 <body>
 
@@ -45,6 +48,15 @@
 
   <!-- HERO -->
   <section class="hero" id="inicio">
+    <!-- Capa de línea dorada animada (scene decoration) -->
+    <svg class="hero-line-svg" viewBox="0 0 800 600" preserveAspectRatio="none" aria-hidden="true">
+      <path class="hero-line-path" d="M 0,500 Q 200,480 400,300 T 800,100" 
+            fill="none" stroke="var(--gold)" stroke-width="1" opacity="0.35"/>
+    </svg>
+
+    <!-- Partículas flotantes -->
+    <div class="hero-particles" aria-hidden="true"></div>
+
     <div class="hero-content">
       <p class="hero-eyebrow"
          data-es="Miami Beach, FL"
@@ -59,7 +71,6 @@
       >Barbería latina en Miami Beach. Fade, clásico o barba — reservás por WhatsApp y llegás directo a la silla.</p>
 
       <div class="hero-btns">
-        <!-- Hero CTA principal -->
         <a href="#"
            class="btn-primary wa-link"
            data-msg-es="Hola! Quiero sacar un turno para hoy. ¿Tienen lugar?"
@@ -78,48 +89,18 @@
            data-en="No lines. No wait. We reply in under 10 minutes."
         >Sin filas. Sin espera. Respondemos en menos de 10 minutos.</p>
       </div>
+
+      <!-- Indicador de scroll -->
+      <div class="hero-scroll-indicator" aria-hidden="true">
+        <span class="hero-scroll-line"></span>
+        <span class="hero-scroll-label" data-es="Scroll" data-en="Scroll">Scroll</span>
+      </div>
     </div>
 
     <div class="hero-pills">
       <span class="pill" data-es="Turno hoy"   data-en="Same-day booking">Turno hoy</span>
       <span class="pill" data-es="Sin espera"  data-en="No waiting"      >Sin espera</span>
       <span class="pill" data-es="Fade limpio" data-en="Clean fade"      >Fade limpio</span>
-    </div>
-  </section>
-
-
-  <!-- POR QUÉ ELEGIRNOS -->
-  <section class="why-us">
-    <div class="why-us-inner">
-      <div class="why-item">
-        <span class="why-num">01</span>
-        <div>
-          <h4 data-es="Llegás a tu hora"    data-en="Show up on time"   >Llegás a tu hora</h4>
-          <p  data-es="Reservás por WhatsApp, te confirmamos el turno y no esperás. Sin filas, sin improvisación."
-              data-en="You book on WhatsApp, we confirm, and you don't wait. No lines, no surprises."
-          >Reservás por WhatsApp, te confirmamos el turno y no esperás. Sin filas, sin improvisación.</p>
-        </div>
-      </div>
-      <div class="why-divider"></div>
-      <div class="why-item">
-        <span class="why-num">02</span>
-        <div>
-          <h4 data-es="Precio fijo siempre"  data-en="Always a flat rate" >Precio fijo siempre</h4>
-          <p  data-es="Lo que ves en el menú es lo que pagás. Sin cobros de último minuto ni sorpresas al final."
-              data-en="What you see on the menu is what you pay. No last-minute charges or end-of-visit surprises."
-          >Lo que ves en el menú es lo que pagás. Sin cobros de último minuto ni sorpresas al final.</p>
-        </div>
-      </div>
-      <div class="why-divider"></div>
-      <div class="why-item">
-        <span class="why-num">03</span>
-        <div>
-          <h4 data-es="Especialistas en fade y barba" data-en="Fade and beard specialists">Especialistas en fade y barba</h4>
-          <p  data-es="Cinco barberos dedicados a cortes modernos y barba. Diez años trabajando con la comunidad latina de Miami."
-              data-en="Five barbers focused on modern cuts and beards. Ten years serving Miami's Latin community."
-          >Cinco barberos dedicados a cortes modernos y barba. Diez años trabajando con la comunidad latina de Miami.</p>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -338,6 +319,7 @@
      data-msg-en="Hi! I'd like to book an appointment at Golden Blade."
      title="WhatsApp">💬</a>
 
-  <script src="script.js"></script>
+ <script src="script.js"></script>
+  <script src="animations.js"></script>
 </body>
 </html>

@@ -73,7 +73,7 @@ nav {
   text-transform: uppercase;
   color: var(--white-dim);
   text-decoration: none;
-  transition: color 0.2s;
+  transition: color 0.16s;
   position: relative;
 }
 
@@ -85,7 +85,7 @@ nav {
   background: var(--gold);
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform 0.25s;
+  transition: transform 0.18s;
 }
 
 .nav-links a:hover { color: var(--white); }
@@ -107,7 +107,7 @@ nav {
   border: 1px solid rgba(201,151,43,0.18);
   padding: 5px 10px;
   cursor: pointer;
-  transition: color 0.2s, border-color 0.2s;
+  transition: color 0.16s, border-color 0.16s;
 }
 
 .lang-btn:hover { color: var(--gold); border-color: var(--gold); }
@@ -121,7 +121,7 @@ nav {
   padding: 8px 18px;
   font-weight: 600;
   text-decoration: none;
-  transition: background 0.2s;
+  transition: background 0.16s;
 }
 
 .nav-cta:hover { background: var(--gold-light); }
@@ -184,7 +184,7 @@ nav {
   color: var(--gold);
   margin-bottom: 24px;
   opacity: 0;
-  animation: fadeUp 0.5s 0.1s forwards;
+  animation: fadeUp 0.38s 0.06s forwards;
 }
 
 .hero h1 {
@@ -194,8 +194,10 @@ nav {
   line-height: 1.0;
   letter-spacing: -1.5px;
   color: var(--white);
+  word-break: keep-all;
+  overflow-wrap: normal;
   opacity: 0;
-  animation: fadeUp 0.65s 0.25s forwards;
+  animation: fadeUp 0.5s 0.16s forwards;
 }
 
 .hero h1 em {
@@ -211,7 +213,7 @@ nav {
   line-height: 1.75;
   letter-spacing: 0.3px;
   opacity: 0;
-  animation: fadeUp 0.65s 0.4s forwards;
+  animation: fadeUp 0.5s 0.28s forwards;
 }
 
 .hero-btns {
@@ -220,7 +222,7 @@ nav {
   flex-wrap: wrap;
   margin-top: 36px;
   opacity: 0;
-  animation: fadeUp 0.65s 0.55s forwards;
+  animation: fadeUp 0.5s 0.4s forwards;
 }
 
 /* Trust line — debajo de los botones */
@@ -230,7 +232,7 @@ nav {
   gap: 10px;
   margin-top: 20px;
   opacity: 0;
-  animation: fadeUp 0.5s 0.7s forwards;
+  animation: fadeUp 0.38s 0.5s forwards;
 }
 
 .hero-trust-dot {
@@ -256,7 +258,7 @@ nav {
   flex-wrap: wrap;
   margin-top: 52px;
   opacity: 0;
-  animation: fadeUp 0.5s 0.85s forwards;
+  animation: fadeUp 0.38s 0.62s forwards;
 }
 
 .pill {
@@ -285,7 +287,7 @@ nav {
   border: 1px solid var(--gold);
   cursor: pointer;
   display: inline-block;
-  transition: background 0.2s, color 0.2s;
+  transition: background 0.16s, color 0.16s;
 }
 
 .btn-primary:hover {
@@ -306,7 +308,7 @@ nav {
   border: 1px solid rgba(244,240,234,0.16);
   cursor: pointer;
   display: inline-block;
-  transition: border-color 0.2s, color 0.2s;
+  transition: border-color 0.16s, color 0.16s;
 }
 
 .btn-outline:hover {
@@ -423,7 +425,7 @@ nav {
   padding: 40px 30px;
   position: relative;
   overflow: hidden;
-  transition: background 0.25s;
+  transition: background 0.18s;
 }
 
 .service-card::after {
@@ -434,7 +436,7 @@ nav {
   background: var(--gold);
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform 0.3s cubic-bezier(.4,0,.2,1);
+  transition: transform 0.22s cubic-bezier(.4,0,.2,1);
 }
 
 .service-card:hover { background: var(--dark3); }
@@ -529,7 +531,7 @@ nav {
   text-decoration: none;
   border-bottom: 1px solid rgba(201,151,43,0.28);
   padding-bottom: 2px;
-  transition: opacity 0.2s, border-color 0.2s;
+  transition: opacity 0.16s, border-color 0.16s;
 }
 
 .about-cta:hover { opacity: 0.7; border-color: var(--gold); }
@@ -559,7 +561,7 @@ nav {
   width: 100%; height: 100%;
   object-fit: cover;
   filter: grayscale(25%) contrast(1.04);
-  transition: transform 0.55s cubic-bezier(.4,0,.2,1), filter 0.4s;
+  transition: transform 0.38s cubic-bezier(.4,0,.2,1), filter 0.28s;
 }
 
 .about-img:hover img {
@@ -606,7 +608,7 @@ nav {
   width: 100%; height: 100%;
   object-fit: cover;
   filter: grayscale(28%) brightness(0.88);
-  transition: transform 0.5s cubic-bezier(.4,0,.2,1), filter 0.35s;
+  transition: transform 0.34s cubic-bezier(.4,0,.2,1), filter 0.24s;
 }
 
 .gallery-item:hover img {
@@ -617,7 +619,7 @@ nav {
 .gallery-overlay {
   position: absolute; inset: 0;
   background: rgba(201,151,43,0);
-  transition: background 0.35s;
+  transition: background 0.24s;
 }
 
 .gallery-item:hover .gallery-overlay {
@@ -679,7 +681,7 @@ nav {
   text-transform: uppercase;
   text-decoration: none;
   border: 1px solid #22C55E;
-  transition: background 0.2s, color 0.2s;
+  transition: background 0.16s, color 0.16s;
 }
 
 .whatsapp-btn:hover {
@@ -752,7 +754,7 @@ footer .socials a {
   text-transform: uppercase;
   color: rgba(244,240,234,0.28);
   text-decoration: none;
-  transition: color 0.2s;
+  transition: color 0.16s;
 }
 
 footer .socials a:hover { color: var(--gold); }
@@ -764,19 +766,46 @@ footer .socials a:hover { color: var(--gold); }
   position: fixed;
   bottom: 24px; right: 24px;
   z-index: 1000;
-  width: 50px; height: 50px;
-  border-radius: 50%;
+  min-height: 54px;
+  padding: 10px 16px 10px 12px;
+  border-radius: 999px;
   background: #22C55E;
   color: white;
-  display: flex; align-items: center; justify-content: center;
+  display: inline-flex; align-items: center; justify-content: center;
+  gap: 10px;
   cursor: pointer; text-decoration: none;
   font-size: 23px; border: none;
-  transition: transform 0.18s;
-  box-shadow: 0 4px 16px rgba(34,197,94,0.32);
-  animation: pulse 3s ease-in-out infinite;
+  white-space: nowrap;
+  transition: transform 0.14s, box-shadow 0.14s;
+  box-shadow: 0 8px 24px rgba(34,197,94,0.28);
+  animation: pulse 2.2s ease-in-out infinite;
 }
 
-.wa-float:hover { transform: scale(1.08); }
+.wa-float:hover {
+  transform: translateY(-1px) scale(1.04);
+  box-shadow: 0 10px 28px rgba(34,197,94,0.34);
+}
+
+.wa-float-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  background: rgba(255,255,255,0.16);
+  flex-shrink: 0;
+}
+
+.wa-float-text {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+  line-height: 1;
+}
 
 /* ─────────────────────────────────────────────
    ANIMACIONES
@@ -831,7 +860,7 @@ footer .socials a:hover { color: var(--gold); }
   .about           { padding: 72px 20px; gap: 40px; }
   .gallery-section { padding: 72px 20px; }
   .cta-section     { padding: 72px 20px; }
-  footer           { padding: 28px 20px; }
+  footer           { paddzing: 28px 20px; }
 
   .gallery-grid {
     grid-template-columns: 1fr 1fr;
@@ -840,6 +869,25 @@ footer .socials a:hover { color: var(--gold); }
 
   .gallery-item:first-child { grid-row: span 1; }
   .cta-info { flex-direction: column; align-items: center; gap: 16px; }
+
+  .wa-float {
+    right: 16px;
+    bottom: 16px;
+    min-height: 48px;
+    padding: 10px 14px 10px 10px;
+    gap: 8px;
+  }
+
+  .wa-float-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 15px;
+  }
+
+  .wa-float-text {
+    font-size: 10px;
+    letter-spacing: 1.1px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -860,10 +908,327 @@ footer .socials a:hover { color: var(--gold); }
   text-decoration: none;
   border-bottom: 1px solid rgba(201,151,43,0.25);
   padding-bottom: 2px;
-  transition: opacity 0.2s, border-color 0.2s;
+  transition: opacity 0.16s, border-color 0.16s;
 }
 
 .service-btn:hover {
   opacity: 0.7;
   border-color: var(--gold);
+}
+/* ============================================
+   GOLDEN BLADE — animations.css
+   Estilos de soporte para GSAP
+   Pegar al final de styles.css
+   ============================================ */
+
+/* ─────────────────────────────────────────────
+   ANTI-FOUC: elementos visibles por default.
+   Solo se ocultan cuando GSAP está listo.
+───────────────────────────────────────────── */
+.hero-eyebrow,
+.hero h1,
+.hero-sub,
+.hero-btns,
+.hero-trust,
+.hero-pills {
+  animation: none !important;
+  opacity: 1;
+}
+
+body.gsap-ready .hero-eyebrow,
+body.gsap-ready .hero-sub,
+body.gsap-ready .hero-btns,
+body.gsap-ready .hero-trust,
+body.gsap-ready .hero-pills {
+  opacity: 0;
+}
+
+
+/* ─────────────────────────────────────────────
+   HERO — escenografía adicional
+───────────────────────────────────────────── */
+
+/* Línea SVG dorada que se traza en el fondo */
+.hero-line-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-line-path {
+  stroke-dasharray: 1200;
+  stroke-dashoffset: 1200;
+}
+
+/* Contenedor de partículas */
+.hero-particles {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.hero-particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: var(--gold);
+  border-radius: 50%;
+  opacity: 0;
+  will-change: transform, opacity;
+  box-shadow: 0 0 4px rgba(201, 151, 43, 0.4);
+}
+
+/* Indicador de scroll */
+.hero-scroll-indicator {
+  position: absolute;
+  bottom: 32px;
+  left: 10vw;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  z-index: 2;
+  opacity: 0;
+}
+
+.hero-scroll-line {
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: rgba(201, 151, 43, 0.6);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-scroll-line::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--gold);
+  transform: translateX(-100%);
+  animation: scrollLine 1.7s cubic-bezier(.7,0,.3,1) infinite;
+}
+
+@keyframes scrollLine {
+  0%   { transform: translateX(-100%); }
+  50%  { transform: translateX(0%); }
+  100% { transform: translateX(100%); }
+}
+
+.hero-scroll-label {
+  font-size: 9px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.7;
+}
+
+/* Subrayado dorado del <em> en hero */
+.hero h1 em {
+  position: relative;
+  display: inline-block;
+}
+
+.hero h1 em::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    var(--gold) 30%,
+    var(--gold-light) 70%,
+    transparent 100%);
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+
+/* Split text — wrappers */
+.split-line {
+  display: block;
+  overflow: hidden;
+  line-height: 1.05;
+  padding-bottom: 0.05em; /* espacio para descenders */
+}
+
+.split-word {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.split-char,
+.split-word-inner {
+  display: inline-block;
+  will-change: transform, opacity;
+}
+
+
+/* ─────────────────────────────────────────────
+   SECTION HEADERS — línea animada
+───────────────────────────────────────────── */
+.section-header h2 {
+  position: relative;
+  display: inline-block;
+}
+
+.gsap-heading-line {
+  position: absolute;
+  left: 50%;
+  bottom: -14px;
+  width: 48px;
+  height: 1px;
+  background: var(--gold);
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  display: block;
+}
+
+
+/* ─────────────────────────────────────────────
+   WHY-US — pinning + 3D items
+───────────────────────────────────────────── */
+.why-us {
+  position: relative;
+}
+
+.why-item {
+  will-change: transform, opacity;
+  perspective: 800px;
+}
+
+.why-num {
+  display: inline-block;
+  will-change: transform;
+}
+
+
+/* ─────────────────────────────────────────────
+   SERVICES — 3D cards
+───────────────────────────────────────────── */
+.services-grid {
+  perspective: 1200px;
+}
+
+.service-card {
+  will-change: transform, opacity;
+  transform-style: preserve-3d;
+}
+
+
+/* ─────────────────────────────────────────────
+   ABOUT — imagen con mask
+───────────────────────────────────────────── */
+.about-img {
+  will-change: clip-path;
+}
+
+.about-img img {
+  will-change: transform;
+}
+
+
+/* ─────────────────────────────────────────────
+   GALLERY — tilt 3D
+───────────────────────────────────────────── */
+.gallery-grid {
+  perspective: 1000px;
+}
+
+.gallery-item {
+  will-change: transform, clip-path;
+  transform-style: preserve-3d;
+}
+
+
+/* ─────────────────────────────────────────────
+   CTA — glow respirante del botón
+───────────────────────────────────────────── */
+.cta-section {
+  position: relative;
+}
+
+.cta-particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.cta-particle {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: var(--gold);
+  border-radius: 50%;
+  opacity: 0;
+  box-shadow: 0 0 6px rgba(201, 151, 43, 0.6);
+}
+
+.whatsapp-btn {
+  position: relative;
+  z-index: 1;
+}
+
+.whatsapp-btn::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  background: radial-gradient(ellipse, rgba(34, 197, 94, 0.45) 0%, transparent 70%);
+  border-radius: 4px;
+  z-index: -1;
+  opacity: 0;
+  filter: blur(8px);
+  animation: btnBreathing 2.3s ease-in-out infinite;
+}
+
+@keyframes btnBreathing {
+  0%, 100% { opacity: 0.3; transform: scale(0.95); }
+  50%      { opacity: 0.8; transform: scale(1.08); }
+}
+
+
+/* ─────────────────────────────────────────────
+   MAGNETIC BUTTONS
+───────────────────────────────────────────── */
+.btn-primary,
+.whatsapp-btn,
+.nav-cta {
+  will-change: transform;
+}
+
+
+/* ─────────────────────────────────────────────
+   REDUCED MOTION
+───────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  body.gsap-ready .hero-eyebrow,
+  body.gsap-ready .hero h1,
+  body.gsap-ready .hero-sub,
+  body.gsap-ready .hero-btns,
+  body.gsap-ready .hero-trust,
+  body.gsap-ready .hero-pills {
+    opacity: 1 !important;
+  }
+  .hero-line-path { stroke-dashoffset: 0 !important; }
+  .gsap-heading-line { transform: translateX(-50%) scaleX(1) !important; }
+  .hero h1 em::after { transform: scaleX(1) !important; }
+  .hero-scroll-indicator { opacity: 1 !important; }
+  .whatsapp-btn::before { animation: none !important; }
+  .hero-scroll-line::after { animation: none !important; }
+}
+
+
+/* ─────────────────────────────────────────────
+   RESPONSIVE — apagar efectos pesados en móvil
+───────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .hero-scroll-indicator { display: none; }
+  .hero-line-svg { opacity: 0.5; }
 }
