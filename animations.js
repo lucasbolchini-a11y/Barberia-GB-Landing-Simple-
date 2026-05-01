@@ -92,6 +92,90 @@
       return Array.from(el.querySelectorAll('.split-word-inner'));
     };
 
+    const headingTitleSelector = '.section-header h2';
+    const translatedAnimatedSelector = [
+      '.hero h1',
+      '.hero-eyebrow',
+      '.hero-sub',
+      '.hero-btns',
+      '.hero-trust',
+      '.hero-pills',
+      '.hero-scroll-indicator',
+      '.hero-content',
+      '.cta-section h2',
+      '.cta-eyebrow',
+      '.whatsapp-btn',
+      '.cta-sub',
+      '.cta-info-item',
+      headingTitleSelector,
+      `${headingTitleSelector} .split-line`,
+      `${headingTitleSelector} .split-word-inner`,
+      '.gsap-heading-line',
+      '.split-char',
+      '.split-word',
+      '.split-word-inner'
+    ].join(', ');
+
+    const rebuildSectionHeaderTitle = (title) => {
+      if (!title) return;
+
+      title.querySelectorAll('.gsap-heading-line').forEach(line => line.remove());
+
+      const words = splitByWords(title);
+      const line = document.createElement('span');
+      line.className = 'gsap-heading-line';
+      title.appendChild(line);
+
+      gsap.set(words, {
+        yPercent: 0,
+        rotate: 0,
+        opacity: 1,
+        clearProps: 'transform,opacity'
+      });
+      gsap.set(line, { scaleX: 1 });
+    };
+
+    const rebuildTranslatedAnimationMarkup = () => {
+      document.querySelectorAll('[data-split]').forEach(el => {
+        el.removeAttribute('data-split');
+      });
+
+      const heroTitle = document.querySelector('.hero h1');
+      const ctaTitle = document.querySelector('.cta-section h2');
+      const heroChars = splitByChars(heroTitle);
+      const ctaChars = splitByChars(ctaTitle);
+
+      if (heroTitle) {
+        gsap.set(heroTitle, { clearProps: 'transform,opacity' });
+        gsap.set(heroChars, {
+          yPercent: 0,
+          rotate: 0,
+          opacity: 1,
+          clearProps: 'transform,opacity'
+        });
+      }
+
+      if (ctaTitle) {
+        gsap.set(ctaTitle, { clearProps: 'transform,opacity' });
+        gsap.set(ctaChars, {
+          yPercent: 0,
+          rotate: 0,
+          opacity: 1,
+          clearProps: 'transform,opacity'
+        });
+      }
+
+      document.querySelectorAll('.section-header').forEach(header => {
+        rebuildSectionHeaderTitle(header.querySelector('h2'));
+      });
+    };
+
+    const syncAfterLanguageChange = () => {
+      gsap.set(translatedAnimatedSelector, { clearProps: 'all' });
+      rebuildTranslatedAnimationMarkup();
+      requestAnimationFrame(() => ScrollTrigger.refresh());
+    };
+
 
     /* ═══════════════════════════════════════════
        ESCENA 1 — HERO
@@ -900,17 +984,7 @@
     window.addEventListener('load', () => ScrollTrigger.refresh());
 
     // Al cambiar idioma, el texto se reescribe → hay que re-splittear
-    const langBtn = document.getElementById('langBtn');
-    if (langBtn) {
-      langBtn.addEventListener('click', () => {
-        setTimeout(() => {
-          document.querySelectorAll('[data-split]').forEach(el => {
-            el.removeAttribute('data-split');
-          });
-          ScrollTrigger.refresh();
-        }, 200);
-      });
-    }
+    document.addEventListener('gb:languagechange', syncAfterLanguageChange);
 
     // Refresh al cambiar tamaño de ventana
     let resizeTimer;
